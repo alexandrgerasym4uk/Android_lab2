@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FragmentFirst">
+
+    <fragment
+        android:id="@+id/FragmentFirst"
+        android:name="com.example.lab2.FragmentFirst"
+        android:label="Input Fragment">
+        <action
+            android:id="@+id/action_inputFragment_to_outputFragment"
+            app:destination="@id/FragmentSecond" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/FragmentSecond"
+        android:name="com.example.lab2.FragmentSecond"
+        android:label="Output Fragment">
+        <action
+            android:id="@+id/action_outputFragment_to_inputFragment"
+            app:destination="@id/FragmentFirst" />
+    </fragment>
+
+</navigation>
+
